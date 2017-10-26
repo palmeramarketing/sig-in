@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang=es>
+   <head>
+      <meta charset=utf-8>
+      <title>Registro de Participantes.</title>
+      <meta content="./img/cropped-favicon-270x270.png" name="msapplication-TileImage">
+      <link href="./img/cropped-favicon-32x32.png" rel="icon" sizes="32x32">
+      <link href="./img/cropped-favicon-192x192.png" rel="icon" sizes="192x192">
+      <link href="./img/cropped-favicon-180x180.png" rel="apple-touch-icon-precomposed">
+      <style type="text/css">
+         body{
+            background-color:#5f2f7b; 
+            margin: 0px;
+            padding: 0px;
+         }
+         .header{
+            position: relative;
+            height:300px;
+         }
+         .header>img{
+            position: relative;
+            top: 75px;
+            left: 75px;
+         }
+         .section{
+            position: relative;
+            background-image: url('./img/fondo.jpg');
+            background-repeat: no-repeat;
+            width: 1089px;
+            /*height:1662px;*/
+         }
+         .fondo-logo{
+            position: relative;
+            width: 90%;
+            height: 95%;
+            padding: 60px;
+         }
+
+         .formulario{
+
+            position: relative;
+
+            width: 100%;
+
+            /*width: 961px;*/
+
+            /*height: 100%;*/
+
+            margin: auto auto;
+
+            background-image: url(./img/fondo-1.png);
+
+            padding-bottom: 20px;
+
+          }
+
+          .formulario-header{
+
+            height: 250px;
+
+          }
+
+          div.left{
+
+            float: left;
+
+            width: 67%;
+
+            height: 230px;
+
+            padding-left: 30px;
+
+            margin-bottom: 60px
+
+          }
+
+          div.left>P{
+
+            margin: 0px;
+
+            color: white;
+
+            font-size: 58px;
+
+            font-family: 'Roboto-Light';      
+
+          }
+
+
+
+          div.right{
+
+            width: 24%;
+
+            height: 230px;
+
+            float: right;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+            background-image: url(./img/amazon-echo.jpg);/*logo-apple-tv.png*/
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+
+            margin: 20px;
+
+          }
+
+          .campos{
+
+            height: 100%;
+
+            padding-right: 40px;
+
+            padding-left: 40px;
+
+            text-align: center;
+
+          }
+
+          .form_control{
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+            width: 90%;
+
+            margin-right: 20px;
+
+            height: 70px;
+
+            margin-top: 20px;
+
+            padding: 20px;
+
+            padding-left: 50px;
+
+            font-size: 45px;
+
+            /* background-color: purple; */
+
+            /* opacity: .5; */
+
+            background-image: url(./img/fondo_campo.png);
+
+            background-color: transparent;
+
+            color: white;
+
+            border:none;
+
+          }
+
+          .btn{
+
+            background-color: #e70895;
+
+            opacity: 1;
+
+            height: 90px;
+
+            margin-top: 20px;
+
+            padding: 0px;
+
+            width: 98%;
+
+          }
+
+          /**/
+
+          input{
+
+            moz-border-radius: 10px;
+
+            -webkit-border-radius: 10px;
+
+            border-radius: 80px;
+
+            border: 1px solid #000000;
+
+            opacity: 1;
+
+          }
+          
+          @media all and (orientation: landscape) {
+              #frm > div.header{
+                  /*display: none;*/
+              }
+              
+          }
+          
+      </style>
+</head>
+<body>
+    <form action="clases/validar.php" id="frm" method="post" target="_self">
+        <div class="header">
+            <img src="./img/logo_v4.png" alt="logo-cw" height="175">
+        </div>
+        <div class="section">
+            <div class="fondo-logo">
+                <div class="formulario">
+                    <div class="formulario-header">
+                        <div class="left">
+                            <p>Regístrate con nosotros y tendrás la oportunidad de ganar un <b>Amazon Echo</b> </p>
+                        </div>
+                        <div class="right"></div>
+                        <div class="ajustar"></div>
+                    </div>
+                    <div class="campos">
+                        <input class="form_control" name=nombre tabindex=1 id=nombre maxlength=100 placeholder=Nombre>
+                        <input class="form_control" name=apellido tabindex=2 id=apellido maxlength=100 placeholder=Apellido>
+                        <input class="form_control" name=email tabindex=3 id=email maxlength=100 placeholder=Email> 
+                        <input class="form_control" name=telefono tabindex=4 id=telefono maxlength=20 placeholder="Telèfono (+57)">
+                        <input class="form_control" name=cargo tabindex=5 id=cargo maxlength=100 placeholder="Cargo">
+                        <input class="form_control" name=compania tabindex=6 id=compania maxlength=100 placeholder=Compañia>
+                        <input class="form_control" name=industria tabindex=7 id=industria maxlength=100 placeholder=Industria>
+                        <input class="form_control" name=ciudad tabindex=8 id=ciudad maxlength=100 placeholder=Ciudad>      
+                        <input class="form_control btn" name=enviar tabindex=9 type=submit value=Registrarse>
+                        <div class="ajustar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<script src="./jquery-ui/external/jquery/jquery_1450e130132c76a48ee346735ab70454.js"></script>
+<script src=./js/jquery.validate.min_5b612ccb0ec60b4b9833d9eef5f7b7ac.js></script>
+<script src=./jquery-ui/jquery-ui.min_48cf0e25c9393498d3107b65d69d57ad.js></script>
+<link href=./css/font.css rel=stylesheet>
+<script>$(document).ready(
+
+   function(){
+
+      $("input[type=submit]").button(),$("input").addClass("ui-corner-all"),$.validator.addMethod("valueNotEquals",function(e,i,a){return a!==e},"Value must not equal arg."),
+
+      $("#frm").validate(
+
+         {
+
+               rules:{
+
+                  nombre:{required:!0,minlength:2},
+
+                  apellido:{required:!0,minlength:2},
+
+                  email:{required:!0,email:!0},
+
+                  telefono:{required:!0,minlength:7},
+
+                  cargo:{required:!0,minlength:2},
+
+                  compania:{required:!0,minlength:2},
+
+                  industria:{required:!0,minlength:2},
+
+                  ciudad:{required:!0,minlength:2}
+
+               },
+
+                  messages:{nombre:{},apellido:{},email:{},cargo:{},compania:{},industria:{},ciudad:{}}})})</script>
+
+  
+
+</html>
